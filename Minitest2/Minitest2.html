@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bai 1-->
+<!--Câu lệnh alert('')-->
+<!--<script>-->
+<!--    alert('Hoàng Hữu Trí')-->
+<!--</script>-->
+
+<!--Bai 2-->
+<!--<script>-->
+<!--    let input = prompt('Nhập 1 số bất kỳ')-->
+<!--    let binhPhuong = input ** 2-->
+<!--    alert('Bình phương của số ' + input + ' là ' + binhPhuong )-->
+<!--</script>-->
+
+<!--Bai 3-->
+<!--<form >-->
+<!--    <input type="text" id="number1" value=""></input>-->
+<!--    <input type="text" id="number2" value=""></input>-->
+<!--    <button type="button" onclick="display()">Tích hai số</button>-->
+
+<!--</form>-->
+<!--<h1 id="result">Result</h1>-->
+<!--<script>-->
+<!--    function display(){-->
+<!--        let number1 = +document.getElementById("number1").value-->
+<!--        let number2 = +document.getElementById("number2").value-->
+<!--        let result = number1 * number2-->
+<!--        document.getElementById("result").innerText = "Tích hai số " + result;-->
+<!--    }-->
+<!--    </script>-->
+
+<!--Bai 4-->
+<table>
+    <tr>
+        <td><lable for="number1">Nhập a</lable></td>
+        <td><lable for="number2">Nhập b</lable></td>
+        <td><lable for="number3">Nhập c</lable></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="number1"></td>
+        <td><input type="text" id="number2"></td>
+        <td><input type="text" id="number3"></td>
+        <td><button onclick="display()">Convert</button></td>
+    </tr>
+</table>
+<h2 id="result">Result</h2>
+<script>
+    function display(){
+        let number1 = +document.getElementById('number1').value
+        let number2 = +document.getElementById('number2').value
+        let number3 = +document.getElementById('number3').value
+        let chuVi = number1 * 4
+        let dienTich = number1 ** 2
+        let binhPhuonga = number1 ** 2
+        let binhPhuongb = number2 ** 2
+        document.getElementById('result').innerHTML = 'Chu vi hình vuông là '+ chuVi +'; Diện tích hình vuông là '+ dienTich;
+        document.getElementById('result').innerHTML = 'Bình phương của a là '+ binhPhuonga +'; Bình phương của b là '+ binhPhuongb;
+        let theKy= Math.floor(number1 / 100) + 1
+        document.getElementById('result').innerHTML = 'Thế kỷ '+ theKy;
+        if(number1 + number2 > number3 && number1 + number3 > number2 && number2 + number3 > number1){
+            document.getElementById('result').innerHTML = 'Là 3 cạnh của tam giác'
+        }
+    }
+</script>
+</body>
+</html>
