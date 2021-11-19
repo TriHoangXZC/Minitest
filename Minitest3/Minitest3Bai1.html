@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 1: Viết chương trình nhập vào 1 mảng n phần tử được nhập từ bàn phím. Sau đó in ra số lượng phần tử chia hết cho 3 trong mảng, nếu không có in ra -1-->
+<script>
+  let number = +prompt('Nhập vào số lượng phần tử: ');
+  let array = new Array(number);
+  let sum = 0;
+  let flag = false
+  for (i =0; i < array.length; i++ ) {
+    array[i] = +prompt('Nhập vào phần tử thứ ' + (i + 1) + ' :');
+    if (array[i] % 3 === 0) {
+      sum += 1;
+      flag = true
+    }
+  }
+  if(flag) {
+    document.write('Số lượng số chia hết cho 3 trong mảng là ' + sum);
+  } else {
+    document.write(-1)
+  }
+</script>
+
+</body>
+</html>

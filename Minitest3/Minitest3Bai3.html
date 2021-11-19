@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  let result = 0;
+  function isPrimes(num) {
+      if (num < 2) {
+          return false
+      } else {
+          for (let i = 2; i <= Math.sqrt(num); i++) {
+              if (num % i === 0) {
+                  return false
+              }
+          }
+          return true
+      }
+
+  }
+
+  function sumPrime(num) {
+      num = 2;
+      for (let i = 0; i < 200; i++) {
+          if (isPrimes(num)) {
+              result += num;
+          }
+          num++;
+      }
+      return result
+  }
+  document.write(sumPrime())
+
+
+</script>
+</body>
+</html>
