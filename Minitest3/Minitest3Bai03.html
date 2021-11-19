@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let arrayLength = prompt("Nhập vào số lượng phần tử trong mảng: ");
+  let array = [];
+  for (let i = 0; i < arrayLength; i++) {
+    array[i] = +prompt(`Nhập vào phần tử thứ ${i + 1} :`);
+  }
+
+  function isPrimes(num) {
+    if (num < 2) {
+      return false
+    } else {
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+          return false
+        }
+      }
+      return true
+    }
+
+  }
+
+  function sumPrime() {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      if (isPrimes(array[i]) && array[i] < 200) {
+        sum = sum + array[i];
+      }
+    }
+    return sum;
+  }
+
+  document.write(sumPrime())
+
+
+</script>
+</body>
+</html>
